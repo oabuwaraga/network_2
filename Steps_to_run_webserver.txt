@@ -1,0 +1,72 @@
+## for new installation use the steps at the bottom
+
+## to run app 
+# 1) start the zeek docker
+docker start 03d749bdbd9e
+docker start e94bc020f25a
+
+
+# 2) enter to the run directory and run "sudo su"
+
+sudo su
+exit
+cd ~/Desktop/network
+
+
+# 3) Activate the virtual env
+source venv3/bin/activate 
+
+#4) Start the server
+python run3.py
+
+
+
+############ For fresh installation ##########
+
+
+##For CICFlowMeter 
+git clone https://github.com/ahlashkari/CICFlowMeter.git
+sudo apt install default-jdk
+cd CICFlowMeter
+
+
+#edit this
+nano gradle/wrapper/gradle-wrapper.properties 
+#put (distributionUrl=https\://services.gradle.org/distributions/gradle-5.0-all.zip)
+
+sudo apt install maven
+mvn install:install-file -Dfile=jnetpcap/linux/jnetpcap-1.4.r1425/jnetpcap.jar -DgroupId=org.jnetpcap -DartifactId=jnetpcap -Dversion=1.4.1 -Dpackaging=jar
+#test it out using:
+sudo bash gradlew execute##For CICFlowMeter 
+git clone https://github.com/ahlashkari/CICFlowMeter.git
+sudo apt install default-jdk
+cd CICFlowMeter
+
+
+#edit this
+nano gradle/wrapper/gradle-wrapper.properties 
+#put (distributionUrl=https\://services.gradle.org/distributions/gradle-5.0-all.zip)
+
+sudo apt install maven
+mvn install:install-file -Dfile=jnetpcap/linux/jnetpcap-1.4.r1425/jnetpcap.jar -DgroupId=org.jnetpcap -DartifactId=jnetpcap -Dversion=1.4.1 -Dpackaging=jar
+#test it out using:
+sudo bash gradlew execute
+
+
+
+## Python env preperation
+#create virtualenv
+#pip3 install virtualenv
+virtualenv -p python venv3
+
+source venv3/bin/activate 
+pip install -r requirements.txt
+sudo su
+python run3.py
+
+
+
+
+
+
+

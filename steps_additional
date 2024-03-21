@@ -1,0 +1,18 @@
+##### Steps to install Suricata #####
+
+
+sudo apt install suricata
+sudo suricata-update
+sudo suricata-update list-sources
+
+## install the ones needed
+sudo suricata-update enable-source et/open
+sudo suricata-update enable-source etnetera/aggressive
+sudo suricata-update enable-source stamus/lateral
+sudo suricata-update enable-source oisf/trafficid
+sudo suricata-update enable-source tgreen/hunting
+
+sudo suricata-update
+
+## inside /etc/suricata/suricata.yaml edit this line to point to /var/lib/suricatas
+sudu nano /etc/suricata/suricata.yaml  #edit this line default-rule-path: /var/lib/suricata/rules

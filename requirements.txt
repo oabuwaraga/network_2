@@ -1,0 +1,12 @@
+flask==2.2
+Werkzeug==2.2.2
+flask_login
+flask_migrate
+flask_wtf
+flask_sqlalchemy
+email_validator
+gunicorn
+pandas
+docker
+tensorflow
+model_evaluator
